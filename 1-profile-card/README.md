@@ -23,7 +23,9 @@ of Angular.
 - _Component Property (name, age, description are the component’s state (i.e., data)),_
 - _These values are initialized and can be updated from the template inputs._
 - _[(ngModel)], from FormsModule, is a part of Angular's template-driven forms system._
+
 ↓
+
 - _{{ name }}, {{ age }}, and {{ description }} display the values of the respective component properties._
 - _Template Input Fields via [(ngModel)]_
 - _[(ngModel)]="name" binds the input field to the name property._
@@ -31,13 +33,17 @@ of Angular.
 - _This system enables data to flow:_
 1. From the component class → to the template (HTML) — so the UI displays the current values.
 2. From the template → back to the component class — so any user input updates the internal data.
+
 ↓
+
 - _The UI input is pre-filled with the current value ('', i.e., empty string)._
 - _The value of name in the class is bound to the input field._
 - _User Types → Updates Component Property_
 - _Angular's change detection runs after input: It re-renders the template wherever {{ name }} is used._
 - _Angular automatically updates the name property in AppComponent with the new input value._
+
 ↓
+
 - _Template Interpolation {{ name }}, {{ age }}, {{ description }} updates and displayed_
 
 
