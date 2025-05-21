@@ -6,13 +6,23 @@
 h1 {
   font-size: 2rem;
 }
+
 button {
   padding: 10px 20px;
   font-size: 1rem;
-  margin: 10px;
+  margin: 5px;
   cursor: pointer;
   border-radius: 10px;
   border: none;
+}
+
+button:focus {
+  outline: 2px solid blue;
+  background-color: #e0e0e0;
+}
+
+button:active {
+  transform: translateY(1px);
 }
 
 button:hover {

@@ -55,7 +55,7 @@ Make sure you have the following installed on your system:
     cd [project-name]
     
     example: cd 1-profile-card
-                or 
+             # or 
              cd 2-counter
     ```
 

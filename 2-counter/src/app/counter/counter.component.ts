@@ -22,13 +22,13 @@ export class CounterComponent {
     this.counter = 0;
   }
 
-  getCounterStatus() {
+  getCounterStatus(): string {
     if (this.counter > 0) {
       return 'positive';
-    } else if (this.counter === 0) {
-      return 'neutral';
-    } else {
+    } else if (this.counter < 0) {
       return 'negative';
+    } else {
+      return 'neutral';
     }
   }
 }
