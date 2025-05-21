@@ -51,12 +51,12 @@ Make sure you have the following installed on your system:
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/sourav-cse-dev/angular-projects.git]
+    git clone https://github.com/sourav-cse-dev/angular-projects.git
     cd [project-name]
     
-    example: cd [1-profile-card] 
+    example: cd 1-profile-card
                 or 
-             cd [2-counter] 
+             cd 2-counter
     ```
 
 2.  **Install dependencies:**

@@ -70,8 +70,8 @@ Make sure you have the following installed on your system:
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/sourav-cse-dev/angular-projects.git]
-    cd [1-profile-card]
+    git clone https://github.com/sourav-cse-dev/angular-projects.git
+    cd 1-profile-card
     ```
 
 2.  **Install dependencies:**
