@@ -69,8 +69,8 @@ In this project I have learned & applied,
                                                         │
                                                         ▼
                                             ┌─────────────────────────────┐
-                                            │ [(ngModel)]="newTask"        │◄─── Two-way binding
-                                            │ updates newTask property     │
+                                            │ [(ngModel)]="newTask"       │◄─── Two-way binding
+                                            │ updates newTask property    │
                                             └────────────┬────────────────┘
                                                         │
                             ┌──────────────┬────────────┴─────────────┬──────────────┐
@@ -80,8 +80,8 @@ In this project I have learned & applied,
                           │                   │                          │
                           └─────► Calls ──────┴─────►  addTask() in Component
                                                         ┌─────────────────────────────┐
-                                                        │ Push newTask into tasks[]    │
-                                                        │ Clear newTask = ''           │
+                                                        │ Push newTask into tasks[]   │
+                                                        │ Clear newTask = ''          │
                                                         └────────────┬────────────────┘
                                                                     │
                                                                     ▼
