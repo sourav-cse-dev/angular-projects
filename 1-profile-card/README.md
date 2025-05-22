@@ -54,15 +54,15 @@ In this project I have learned & applied,
                                   │          User Enters Input               │
                                   │  (e.g., Name = "Alex", Age = 25, etc.)   │
                                   └────────────────────┬─────────────────────┘
-                                                        │
-                                                        ▼
+                                                       │
+                                                       ▼
                                         ┌────────────────────────────────┐
                                         │ [(ngModel)]="property"         │
                                         │ Two-way data binding for:      │
                                         │ name, age, description         │
                                         └──────────────┬─────────────────┘
-                                                      │
-                                                      ▼
+                                                       │
+                                                       ▼
                                       ┌─────────────────────────────────────────────┐
                                       │ Component Class (AppComponent)              │
                                       │                                             │
@@ -70,8 +70,8 @@ In this project I have learned & applied,
                                       │ age: number | undefined                     │
                                       │ description: string = ''                    │
                                       └────────────────┬────────────────────────────┘
-                                                        │
-                                                        ▼
+                                                       │
+                                                       ▼
                                       ┌─────────────────────────────────────────────┐
                                       │ Template Interpolation                      │
                                       │                                             │
