@@ -15,10 +15,10 @@
 In this project I have learned & applied,
 
 - _interpolation_,
-- _two-way data binding_ using _[(ngModel)]_ in _FormsModule_ 
-of Angular.
+- _two-way data binding_ using _[(ngModel)]_ in _FormsModule_
+  of Angular.
 
-## How it works - Data Flow 
+## How it works - Data Flow
 
 - _Component Property (name, age, description are the component’s state (i.e., data)),_
 - _These values are initialized and can be updated from the template inputs._
@@ -31,6 +31,7 @@ of Angular.
 - _[(ngModel)]="name" binds the input field to the name property._
 - _Two-Way Data Flow with [(ngModel)]_
 - _This system enables data to flow:_
+
 1. From the component class → to the template (HTML) — so the UI displays the current values.
 2. From the template → back to the component class — so any user input updates the internal data.
 
@@ -46,6 +47,41 @@ of Angular.
 
 - _Template Interpolation {{ name }}, {{ age }}, {{ description }} updates and displayed_
 
+## Data Flow Diagram
+
+```bash
+                                  ┌──────────────────────────────────────────┐
+                                  │          User Enters Input               │
+                                  │  (e.g., Name = "Alex", Age = 25, etc.)   │
+                                  └────────────────────┬─────────────────────┘
+                                                        │
+                                                        ▼
+                                        ┌────────────────────────────────┐
+                                        │ [(ngModel)]="property"         │
+                                        │ Two-way data binding for:      │
+                                        │ name, age, description         │
+                                        └──────────────┬─────────────────┘
+                                                      │
+                                                      ▼
+                                      ┌─────────────────────────────────────────────┐
+                                      │ Component Class (AppComponent)              │
+                                      │                                             │
+                                      │ name: string = ''                           │
+                                      │ age: number | undefined                     │
+                                      │ description: string = ''                    │
+                                      └────────────────┬────────────────────────────┘
+                                                        │
+                                                        ▼
+                                      ┌─────────────────────────────────────────────┐
+                                      │ Template Interpolation                      │
+                                      │                                             │
+                                      │ <p><strong>Name: </strong>{{ name }}</p>    │
+                                      │ <p><strong>Age: </strong>{{ age }}</p>      │
+                                      │ <p><strong>Description: </strong>{{         │
+                                      │  description }}</p>                         │
+                                      └─────────────────────────────────────────────┘
+
+```
 
 ## Getting Started
 
