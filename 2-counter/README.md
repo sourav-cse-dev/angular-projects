@@ -23,33 +23,42 @@ In this project I have learned & applied,
 - _ngClass_
 of Angular.
 
-## How it works - Data Flow 
+## How it works 
 
-- _Component Property (name, age, description are the component’s state (i.e., data)),_
-- _These values are initialized and can be updated from the template inputs._
-- _[(ngModel)], from FormsModule, is a part of Angular's template-driven forms system._
+- **A simple Angular component that implements a counter and uses _conditional rendering_ with _ngSwitch_ to display messages based on the counter's value.**
 
-↓
+- _counter: number = 0; Holds the current count._
+- _increment() { this.counter++; }, decrement() { this.counter--; }, reset() { this.counter = 0; }; Methods to change the value of counter._
+- _getCounterStatus(); Returns a string based on the value of the counter._
+- _{{ counter }}; Displays the current value using Angular interpolation._
+- _click events on buttons are bound to the respective component methods._
+- _ngSwitch is like a switch-case statement in Angular templates. It checks the result of getCounterStatus(). Depending on the return value ('positive', 'neutral', or 'negative'), the appropriate <p> tag is displayed._
+- _ngClass is used here to apply a class like 'positive', 'neutral', or 'negative'. These classes defined in counter.component.scss to color the text (green, gray, red, etc.)._
 
-- _{{ name }}, {{ age }}, and {{ description }} display the values of the respective component properties._
-- _Template Input Fields via [(ngModel)]_
-- _[(ngModel)]="name" binds the input field to the name property._
-- _Two-Way Data Flow with [(ngModel)]_
-- _This system enables data to flow:_
-1. From the component class → to the template (HTML) — so the UI displays the current values.
-2. From the template → back to the component class — so any user input updates the internal data.
+1. User clicks a button
+2. Component method updates counter
+3. Angular detects change and re-renders:
+4. Updates {{ counter }}
+5. Evaluates getCounterStatus() again
+6. Displays the corresponding message using ngSwitch.
 
-↓
-
-- _The UI input is pre-filled with the current value ('', i.e., empty string)._
-- _The value of name in the class is bound to the input field._
-- _User Types → Updates Component Property_
-- _Angular's change detection runs after input: It re-renders the template wherever {{ name }} is used._
-- _Angular automatically updates the name property in AppComponent with the new input value._
-
-↓
-
-- _Template Interpolation {{ name }}, {{ age }}, {{ description }} updates and displayed_
+## Data Flow
+```bash
+          [Component State: counter = 0]
+                      ↓
+       Displayed via interpolation in template
+                      ↓
+     User clicks button (Event Binding: (click))
+                      ↓
+    Method updates counter (e.g., counter++)
+                      ↓
+      Angular detects change (Change Detection)
+                      ↓
+      Angular re-renders the template:
+      - {{ counter }} is updated
+      - getCounterStatus() is called
+      - New message is conditionally rendered
+```
 
 ## Getting Started
 
