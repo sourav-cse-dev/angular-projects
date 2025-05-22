@@ -59,7 +59,7 @@ In this project I have learned & applied,
                                             Angular updates UI (removes <li>)
 ```
 
-## To-Do App Data Flow Diagram
+## Data Flow Diagram
 
 ```bash
                                             ┌─────────────────────────────┐
