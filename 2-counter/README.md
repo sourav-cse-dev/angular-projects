@@ -21,9 +21,9 @@ In this project I have learned & applied,
 - _ngSwitch_ & _ngSwitchCase_ in _CommonModule_,
 - _ngStyle_ and
 - _ngClass_
-of Angular.
+  of Angular.
 
-## How it works 
+## How it works
 
 **A simple Angular component that implements a counter and uses _conditional rendering_ with _ngSwitch_ to display messages based on the counter's value.**
 
@@ -43,21 +43,67 @@ of Angular.
 6. Displays the corresponding message using ngSwitch.
 
 ## Data Flow
+
 ```bash
-                                        [Component State: counter = 0]
-                                                    ↓
-                                    Displayed via interpolation in template
-                                                    ↓
-                                  User clicks button (Event Binding: (click))
-                                                    ↓
-                                  Method updates counter (e.g., counter++)
-                                                    ↓
-                                    Angular detects change (Change Detection)
-                                                    ↓
-                                    Angular re-renders the template:
-                                    - {{ counter }} is updated
-                                    - getCounterStatus() is called
-                                    - New message is conditionally rendered
+                                          [Component State: counter = 0]
+                                                      ↓
+                                      Displayed via interpolation in template
+                                                      ↓
+                                    User clicks button (Event Binding: (click))
+                                                      ↓
+                                    Method updates counter (e.g., counter++)
+                                                      ↓
+                                      Angular detects change (Change Detection)
+                                                      ↓
+                                      Angular re-renders the template:
+                                      - {{ counter }} is updated
+                                      - getCounterStatus() is called
+                                      - New message is conditionally rendered
+```
+
+## Data Flow Diagram
+
+```bash
+                                              ┌────────────────────────┐
+                                              │     User Interaction   │
+                                              │    (Clicks on Buttons) │
+                                              └────────────┬───────────┘
+                                                           │
+                                                           ▼
+                                              ┌────────────────────────┐
+                                              │   Event Bindings       │
+                                              │ (click)="increment()"  │
+                                              │ (click)="decrement()"  │
+                                              │ (click)="reset()"      │
+                                              └────────────┬───────────┘
+                                                           │
+                                                           ▼
+                                            ┌────────────────────────────────┐
+                                            │   Component Class (TypeScript) │
+                                            │                                │
+                                            │ counter: number = 0;           │
+                                            │                                │
+                                            │ increment()  → counter++       │
+                                            │ decrement()  → counter--       │
+                                            │ reset()      → counter = 0     │
+                                            │                                │
+                                            │ getCounterStatus(): string     │
+                                            │   └── 'positive' | 'neutral'   │
+                                            │       | 'negative'             │
+                                            └─────────────┬──────────────────┘
+                                                          │
+                                                          ▼
+                                    ┌────────────────────────────────────────────────┐
+                                    │ Template (HTML)                                │
+                                    │                                                │
+                                    │ {{ counter }}                                  │
+                                    │ └─ Interpolation displays updated value        │
+                                    │                                                │
+                                    │ <div [ngSwitch]="getCounterStatus()">          │
+                                    │ └─ Conditional rendering based on status       │
+                                    │    via *ngSwitchCase                           │
+                                    └────────────────────────────────────────────────┘
+
 ```
 
 ## Getting Started
