@@ -66,15 +66,15 @@ In this project I have learned & applied,
                                             │       User Types Input      │
                                             │   (e.g., "Buy groceries")   │
                                             └────────────┬────────────────┘
-                                                        │
-                                                        ▼
+                                                         │
+                                                         ▼
                                             ┌─────────────────────────────┐
                                             │ [(ngModel)]="newTask"       │◄─── Two-way binding
                                             │ updates newTask property    │
                                             └────────────┬────────────────┘
-                                                        │
-                            ┌──────────────┬────────────┴─────────────┬──────────────┐
-                            ▼              ▼                          ▼              ▼
+                                                         │
+                            ┌──────────────┬─────────────┴─────────────┬──────────────┐
+                            ▼              ▼                           ▼              ▼
                         [Click "Add"]   [Press Enter]        Angular detects changes  (Template updates)
                         (click)         (keyup.enter)             in newTask
                           │                   │                          │
@@ -83,11 +83,11 @@ In this project I have learned & applied,
                                                         │ Push newTask into tasks[]   │
                                                         │ Clear newTask = ''          │
                                                         └────────────┬────────────────┘
-                                                                    │
-                                                                    ▼
+                                                                     │
+                                                                     ▼
                                                         Angular triggers DOM update
-                                                                    │
-                                                                    ▼
+                                                                     │
+                                                                     ▼
                               ┌────────────────────────────────────────────────────────────┐
                               │        <li *ngFor="let task of tasks">                     │
                               │            {{ task }}                                      │
@@ -101,7 +101,7 @@ In this project I have learned & applied,
                                                         │ removeTask(i):              │
                                                         │ Remove item from tasks[]    │
                                                         └────────────┬────────────────┘
-                                                                    ▼
+                                                                     ▼
                                                         Angular re-renders the list
 
 ```
