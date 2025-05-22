@@ -7,10 +7,11 @@ This repository contains my learnings on Angular with projects, built to demonst
 
 ## Project List
 
-| No. | Project Name                              | Description |
-|-----|-------------------------------------------|-------------|
-| 01  | [Profile Card App](./1-profile-card)      | Simple two-way data binding with `[(ngModel)]` |
-| 02  | [Counter App](./2-counter/)               | Add/edit/delete tasks using Angular Forms |
+| No. | Project Name                              | Description                                     |
+|-----|-------------------------------------------|-------------------------------------------------|
+| 01  | [Profile Card App](./1-profile-card)      | `interpolation`, `ngModel`                      |
+| 02  | [Counter App](./2-counter/)               | `ngSwitch`, `ngSwitchCase`, `ngStyle`, `ngClass`|
+| 03  | [ToDo App](./3-todo/)                     |       |
 
 > Each project includes its own `README.md` with setup instructions.
 

@@ -44,20 +44,20 @@ of Angular.
 
 ## Data Flow
 ```bash
-                          [Component State: counter = 0]
-                                      ↓
-                      Displayed via interpolation in template
-                                      ↓
-                    User clicks button (Event Binding: (click))
-                                      ↓
-                    Method updates counter (e.g., counter++)
-                                      ↓
-                      Angular detects change (Change Detection)
-                                      ↓
-                      Angular re-renders the template:
-                      - {{ counter }} is updated
-                      - getCounterStatus() is called
-                      - New message is conditionally rendered
+                                        [Component State: counter = 0]
+                                                    ↓
+                                    Displayed via interpolation in template
+                                                    ↓
+                                  User clicks button (Event Binding: (click))
+                                                    ↓
+                                  Method updates counter (e.g., counter++)
+                                                    ↓
+                                    Angular detects change (Change Detection)
+                                                    ↓
+                                    Angular re-renders the template:
+                                    - {{ counter }} is updated
+                                    - getCounterStatus() is called
+                                    - New message is conditionally rendered
 ```
 
 ## Getting Started
