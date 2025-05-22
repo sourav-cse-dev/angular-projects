@@ -25,14 +25,14 @@ of Angular.
 
 ## How it works 
 
-- **A simple Angular component that implements a counter and uses _conditional rendering_ with _ngSwitch_ to display messages based on the counter's value.**
+**A simple Angular component that implements a counter and uses _conditional rendering_ with _ngSwitch_ to display messages based on the counter's value.**
 
 - _counter: number = 0; Holds the current count._
 - _increment() { this.counter++; }, decrement() { this.counter--; }, reset() { this.counter = 0; }; Methods to change the value of counter._
 - _getCounterStatus(); Returns a string based on the value of the counter._
 - _{{ counter }}; Displays the current value using Angular interpolation._
 - _click events on buttons are bound to the respective component methods._
-- _ngSwitch is like a switch-case statement in Angular templates. It checks the result of getCounterStatus(). Depending on the return value ('positive', 'neutral', or 'negative'), the appropriate <p> tag is displayed._
+- _ngSwitch is like a switch-case statement in Angular templates. It checks the result of getCounterStatus(). Depending on the return value ('positive', 'neutral', or 'negative'), the appropriate p tag is displayed._
 - _ngClass is used here to apply a class like 'positive', 'neutral', or 'negative'. These classes defined in counter.component.scss to color the text (green, gray, red, etc.)._
 
 1. User clicks a button
