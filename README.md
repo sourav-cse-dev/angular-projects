@@ -11,7 +11,7 @@ This repository contains my learnings on Angular with projects, built to demonst
 |-----|-------------------------------------------|-------------------------------------------------|
 | 01  | [Profile Card App](./1-profile-card)      | `interpolation`, `ngModel`                      |
 | 02  | [Counter App](./2-counter/)               | `ngSwitch`, `ngSwitchCase`, `ngStyle`, `ngClass`|
-| 03  | [ToDo App](./3-todo/)                     |       |
+| 03  | [To Do App](./3-todo/)                    |       |
 
 > Each project includes its own `README.md` with setup instructions.
 

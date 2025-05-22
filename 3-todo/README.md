@@ -10,9 +10,8 @@
 ## Project Images
 
 ![Project Image 1](./assets/project-image-initial.png)
-![Project Image 2](./assets/project-image-positive.png)
-![Project Image 3](./assets/project-image-negative.png)
-![Project Image 4](./assets/project-image-reset.png)
+![Project Image 2](./assets/project-image-add-task.png)
+![Project Image 3](./assets/project-image-task-added.png)
 
 ## Project Learnings & Challenges
 
@@ -89,11 +88,11 @@ In this project I have learned & applied,
                                                         Angular triggers DOM update
                                                                     │
                                                                     ▼
-                              ┌────────────────────────────────────────────────────────┐
-                              │        <li *ngFor="let task of tasks">                 │
-                              │            {{ task }}                                  │
+                              ┌────────────────────────────────────────────────────────────┐
+                              │        <li *ngFor="let task of tasks">                     │
+                              │            {{ task }}                                      │
                               │            <button (click)="removeTask(i)">Remove</button> │
-                              └────────────────────────────────────────────────────────┘
+                              └────────────────────────────────────────────────────────────┘
                                                                     │
                                                   (Click "Remove" on any task)
                                                                     │
