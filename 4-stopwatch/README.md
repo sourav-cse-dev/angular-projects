@@ -11,6 +11,8 @@
 
 ![Project Image 1](./assets/initial-state.png)
 ![Project Image 2](./assets/after-started.png)
+![Project Image 3](./assets/after-stopped.png)
+![Project Image 4](./assets/after-reset.png)
 
 ## Project Learnings & Challenges
 
@@ -64,22 +66,22 @@ In this project I have learned & applied,
                                            │     startStop() method       │
                                            └────────────┬─────────────────┘
                                                         │
-         ┌──────────────────────────────────────────────┴──────────────────────────────────────────────┐
-         ▼                                                                                             ▼
- ┌──────────────────────────────┐                                                    ┌──────────────────────────────┐
- │ isRunning is false           │                                                    │ isRunning is true            │
- │ └── Call start()             │                                                    │ └── Call stop()              │
- └────────────┬─────────────────┘                                                    └────────────┬─────────────────┘
-              │                                                                                   │
-              ▼                                                                                   ▼
- ┌──────────────────────────────┐                                                    ┌──────────────────────────────┐
- │ setInterval every 100ms      │                                                    │ clearInterval()              │
- │ └── elapsedTime += 1         │                                                    │ isRunning = false            │
- │ isRunning = true             │                                                    │ status = "Stopwatch stopped" │
- │ status = "Stopwatch started" │                                                    │ Update UI                    │
- │ Angular change detection     │                                                    └────────────┬─────────────────┘
- └────────────┬─────────────────┘                                                                 │
-              │                                                                                   ▼
+         ┌──────────────────────────────────────────────┴───────────────────────────────────────────┐
+         ▼                                                                                          ▼
+ ┌──────────────────────────────┐                                                 ┌────────────────────────────┐
+ │ isRunning is false           │                                                 │ isRunning is true          │
+ │ └── Call start()             │                                                 │ └── Call stop()            │
+ └────────────┬─────────────────┘                                                 └────────────┬───────────────┘
+              │                                                                                │
+              ▼                                                                                ▼
+ ┌──────────────────────────────┐                                                 ┌─────────────────────────────┐
+ │ setInterval every 100ms      │                                                 │ clearInterval()             │
+ │ └── elapsedTime += 1         │                                                 │ isRunning = false           │
+ │ isRunning = true             │                                                 │ status = "Stopwatch stopped"│
+ │ status = "Stopwatch started" │                                                 │ Update UI                   │
+ │ Angular change detection     │                                                 └────────────┬────────────────┘
+ └────────────┬─────────────────┘                                                              │
+              │                                                                                ▼
               ▼
  ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
  │ - <p>{{ elapsedTime | number:'1.1-1' }}</p>                                                                    │
