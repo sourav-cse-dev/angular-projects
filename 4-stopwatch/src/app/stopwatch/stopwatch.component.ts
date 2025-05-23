@@ -11,6 +11,7 @@ export class StopwatchComponent {
   elapsedTime = 0;
   isRunning = false;
   intervalRef: any;
+  status = '';
 
   startStop() {
     this.isRunning ? this.stop() : this.start();
@@ -21,19 +22,19 @@ export class StopwatchComponent {
     this.intervalRef = setInterval(() => {
       this.elapsedTime += 1;
     }, 100);
-    console.log('Stopwatch started');
+    this.status = 'Stopwatch started';
   }
 
   private stop() {
     this.isRunning = false;
     clearInterval(this.intervalRef);
-    console.log('Stopwatch stopped');
+    this.status = 'Stopwatch stopped';
   }
 
   reset() {
     this.isRunning = false;
     clearInterval(this.intervalRef);
     this.elapsedTime = 0;
-    console.log('Stopwatch reseted');
+    this.status = 'Stopwatch reset';
   }
 }

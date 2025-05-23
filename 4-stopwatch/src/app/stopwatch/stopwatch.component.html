@@ -1,6 +1,17 @@
 <div class="stopwatch-container">
   <h2>Stopwatch</h2>
   <p class="time">{{ elapsedTime | number : "1.1-1" }} seconds</p>
+  <p
+    class="status-bar"
+    [ngClass]="{
+      started: status === 'Stopwatch started',
+      stopped: status === 'Stopwatch stopped',
+      reset: status === 'Stopwatch reset'
+    }"
+  >
+    {{ status }}
+  </p>
+
   <div class="controls">
     <button (click)="startStop()">{{ isRunning ? "Stop" : "Start" }}</button>
     <button (click)="reset()" [disabled]="!elapsedTime">Reset</button>
