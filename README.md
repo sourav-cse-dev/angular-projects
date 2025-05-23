@@ -11,6 +11,7 @@ This repository contains my learnings on Angular with projects, built to demonst
 | 01  | [Profile Card App](./1-profile-card) | `interpolation`, `ngModel`                       |
 | 02  | [Counter App](./2-counter/)          | `ngSwitch`, `ngSwitchCase`, `ngStyle`, `ngClass` |
 | 03  | [To Do App](./3-todo/)               | `ngIf`, `ngFor`                                  |
+| 04  | [Stopwatch App](./4-stopwatch/)      | `pipes`                                          |
 
 > Each project includes its own `README.md` with setup instructions.
 
@@ -21,7 +22,6 @@ This repository contains my learnings on Angular with projects, built to demonst
 - SCSS
 - RxJS
 - Angular Signals
-- Tailwind CSS
 - Angular Forms (Template & Reactive)
 - NgRx Store
 - NgRx Signal Store
