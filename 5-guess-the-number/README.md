@@ -2,6 +2,43 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
 
+flowchart TD
+
+A[User Input: Types a Number] --> B[Two-way Binding via ngModel] 
+B --> C[Component Property: guessedNumber]
+
+click A href "#userinput"
+click B href "#ngmodel"
+click C href "#guessednumber"
+
+C --> D[User Clicks 'Submit Guess']
+
+D --> E[submitGuess() method]
+E --> F[isValidGuess(guessedNumber)]
+F -- valid --> G[attempsLeft--]
+G --> H[evaluateGuess()]
+H --> I{Correct Guess?}
+
+I -- Yes --> J[endGame(true)]
+I -- No & Attempts Left --> K[Set feedBackMessage: Too High/Low]
+I -- No & No Attempts --> L[endGame(false)]
+
+J --> M[Set gameOver = true & feedBackMessage = Win Message]
+L --> N[Set gameOver = true & feedBackMessage = Lose Message]
+
+K --> O[UI Feedback Updates]
+M --> O
+N --> O
+
+O --> P[Displayed in Template via Interpolation]
+
+P --> Q[Game Over = true triggers Play Again button]
+
+Q --> R[User Clicks 'Play again']
+R --> S[resetGame()]
+S --> T[Reset all component properties]
+T --> A
+
 
 ┌──────────────────────────────┐
                                        │         User Input           │
