@@ -2,6 +2,79 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
 
+
+┌──────────────────────────────┐
+                                       │         User Input           │
+                                       │    Enters number in input    │
+                                       └────────────┬─────────────────┘
+                                                    │
+                                                    ▼
+                                       ┌──────────────────────────────┐
+                                       │   [(ngModel)] = guessedNumber│
+                                       │   (Two-way data binding)     │
+                                       └────────────┬─────────────────┘
+                                                    │
+                                                    ▼
+                                       ┌──────────────────────────────┐
+                                       │  Clicks "Submit Guess" Button│
+                                       └────────────┬─────────────────┘
+                                                    ▼
+                                       ┌──────────────────────────────┐
+                                       │      submitGuess() method     │
+                                       └────────────┬─────────────────┘
+                                                    ▼
+                                       ┌──────────────────────────────┐
+                                       │ isValidGuess(guessedNumber)? │
+                                       └────────────┬─────────────────┘
+                                       No           │           Yes
+                                       ▼            ▼
+                        ┌──────────────────────┐   ┌─────────────────────────────┐
+                        │ Show validation error│   │ Decrement attempsLeft       │
+                        │ feedBackMessage set  │   └────────────┬────────────────┘
+                        └──────────────────────┘                ▼
+                                                   ┌──────────────────────────────┐
+                                                   │      evaluateGuess()         │
+                                                   └────────────┬─────────────────┘
+                                                                ▼
+                                                ┌───────────────────────────────────┐
+                                                │ Compare guessedNumber & secretNum │
+                                                └────────────┬──────────────────────┘
+                                                             ▼
+        ┌──────────────────────────────┐   ┌────────────────────────────────────────────┐
+        │ guessedNumber === secretNum? │   │ Attempts left === 0?                       │
+        └────────────┬─────────────────┘   └────────────┬───────────────────────────────┘
+        Yes          │                                 No│
+        ▼            ▼                                   ▼
+┌─────────────────────────────┐         ┌────────────────────────────────────────────┐
+│   endGame(true):            │         │   feedBackMessage:                         │
+│   gameOver = true           │         │   "Too High!" or "Too Low!"                │
+│   Win message               │         └────────────────────────────────────────────┘
+└────────────┬────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────────┐
+│ Angular Updates Template                     │
+│ - feedBackMessage displayed                  │
+│ - Play Again button shown (if gameOver true) │
+└──────────────────────────────────────────────┘
+
+        ┌──────────────────────────────────────────┐
+        │     User Clicks "Play Again" Button      │
+        └────────────┬─────────────────────────────┘
+                     ▼
+        ┌──────────────────────────────────────────┐
+        │          resetGame() method              │
+        │ - Resets secretNumber                    │
+        │ - Resets attempsLeft                     │
+        │ - Clears guessedNumber & feedBackMessage │
+        │ - Sets gameOver = false                  │
+        └──────────────────────────────────────────┘
+                     │
+                     ▼
+        ┌──────────────────────────────────────────┐
+        │         Game ready for new guess         │
+        └──────────────────────────────────────────┘
+
 ## Development server
 
 To start a local development server, run:
