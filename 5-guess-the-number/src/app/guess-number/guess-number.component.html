@@ -2,6 +2,10 @@
   <h2>Guess the Number Game</h2>
   <p>Guess the number between 1 and 100!</p>
 
+  <div *ngIf="feedBackMessage" class="feedback">
+    <p>{{ feedBackMessage }}</p>
+  </div>
+
   <div *ngIf="!gameOver">
     <label for="guess">Your Guess: </label>
     <input
@@ -17,10 +21,8 @@
     <button (click)="submitGuess()" [disabled]="!isValidGuess(guessedNumber)">
       Submit Guess
     </button>
-    <p>Attemps left: {{ attempsLeft }}</p>
-    <div *ngIf="feedBackMessage" class="feedback">
-      <p>{{ feedBackMessage }}</p>
-    </div>
+
+    <p>Attempts left: {{ attempsLeft }}</p>
 
     <div *ngIf="gameOver">
       <button (click)="resetGame()">Play again</button>

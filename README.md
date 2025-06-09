@@ -6,12 +6,13 @@ This repository contains my learnings on Angular with projects, built to demonst
 
 ## Project List
 
-| No. | Project Name                         | Description                                      |
-| --- | ------------------------------------ | ------------------------------------------------ |
-| 01  | [Profile Card App](./1-profile-card) | `interpolation`, `ngModel`                       |
-| 02  | [Counter App](./2-counter/)          | `ngSwitch`, `ngSwitchCase`, `ngStyle`, `ngClass` |
-| 03  | [To Do App](./3-todo/)               | `ngIf`, `ngFor`                                  |
-| 04  | [Stopwatch App](./4-stopwatch/)      | `pipes`                                          |
+| No. | Project Name                                  | Description                                      |
+| --- | --------------------------------------------- | ------------------------------------------------ |
+| 01  | [Profile Card App](./1-profile-card)          | `interpolation`, `ngModel`                       |
+| 02  | [Counter App](./2-counter/)                   | `ngSwitch`, `ngSwitchCase`, `ngStyle`, `ngClass` |
+| 03  | [To Do App](./3-todo/)                        | `ngIf`, `ngFor`                                  |
+| 04  | [Stopwatch App](./4-stopwatch/)               | `pipes`                                          |
+| 05  | [Guess The Number App](./5-guess-the-number/) |                                                  |
 
 > Each project includes its own `README.md` with setup instructions.
 

@@ -32,7 +32,7 @@ export class GuessNumberComponent {
 
   submitGuess(): void {
     if (!this.isValidGuess(this.guessedNumber)) {
-      this.feedBackMessage = `Enter a number beween 1 and ${GuessNumberComponent.MAX_NUMBER}`;
+      this.feedBackMessage = `Enter a number between 1 and ${GuessNumberComponent.MAX_NUMBER}`;
       return;
     }
     this.attempsLeft--;
@@ -55,7 +55,7 @@ export class GuessNumberComponent {
   private endGame(isWin: boolean): void {
     this.gameOver = true;
     this.feedBackMessage = isWin
-      ? 'Congratulations! You gueessed the correct number!'
+      ? 'Congratulations! You guessed the correct number!'
       : `Game over! The correct number was ${this.secretNumber}`;
   }
   resetGame(): void {
